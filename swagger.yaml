@@ -1,0 +1,63 @@
+openapi: 3.0.0
+info:
+  title: Software Project Fall 1402 - Phase 3
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8085'
+paths:
+  /forums:
+    post:
+      tags:
+        - General
+      summary: create content
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                author: arman
+                title: t1
+                text: te2
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /forums/65b5bf37665e2208c52754d8/comments:
+    post:
+      tags:
+        - General
+      summary: create comment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                comment: bdjbjbdjbhdbjhdbjb
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /forums/65b583a3bda1ee964a79a561:
+    get:
+      tags:
+        - General
+      summary: get one forums
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /signup:
+    get:
+      tags:
+        - General
+      summary: get all forums
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
